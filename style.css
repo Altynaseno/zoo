@@ -1,0 +1,60 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+/* navigation */
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+/* class */
+.highlight {
+    color: green;
+    font-weight: bold;
+}
+
+/* id */
+#main-title {
+    font-size: 32px;
+}
+
+/* box model */
+img {
+    width: 300px;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* positioning */
+aside {
+    position: relative;
+    left: 20px;
+    background: lightgray;
+    padding: 5px;
+}
+
+/* float */
+article {
+    float: left;
+    width: 45%;
+}
+
+/* clear */
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
