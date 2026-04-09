@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Animal Care</title>
-
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="icon.png">
-
-    <!-- Internal CSS -->
     <style>
-        h1 {
-            color: darkgreen;
-        }
+        #priority-demo { color: blue; }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -34,44 +24,37 @@
 
 <hr>
 
-<section>
-    <h2>About</h2>
-
-    <p class="highlight">This website helps you learn how to take care of pets properly.</p>
-
-    <!-- INLINE CSS -->
-    <p style="color:red;">Important: Always love your pet!</p>
-
-    <figure>
-        <img src="pet.jpg" alt="pets">
-        <figcaption>Common household pets</figcaption>
-    </figure>
+<section id="priority-section">
+    <h2>Selector Priority Demo</h2>
+    <p id="priority-demo" class="priority-class" style="color: red;">
+        This text demonstrates CSS selector precedence.
+    </p>
 </section>
 
-<section>
-    <h2>Basic Rules</h2>
+<section id="about">
+    <h2>About Our Mission</h2>
+    <p class="highlight">This website helps you learn how to take care of pets properly.</p>
+    <p class="justify-text">
+        Proper animal care requires patience, knowledge, and dedication. Whether you own a dog, a cat, or a lizard, 
+        understanding their specific needs is crucial for a happy life. We provide the best guides for your furry friends.
+    </p>
+</section>
 
-    <ul>
-        <li>Feed regularly</li>
-        <li>Keep clean</li>
-        <li>Visit vet</li>
-    </ul>
-
-    <ol>
-        <li>Food</li>
-        <li>Care</li>
-        <li>Love</li>
-    </ol>
-
-    <blockquote>
-        Animals are our best friends.
-    </blockquote>
+<section id="profile-area">
+    <h2>Featured Pet</h2>
+    <div class="profile-card" id="featured-pet">
+        <img src="pet.jpg" alt="Buddy the Dog" class="profile-img">
+        <div class="profile-info">
+            <h3 class="pet-name">Buddy</h3>
+            <p class="pet-desc">A friendly Golden Retriever who loves playing catch and eating healthy treats.</p>
+            <span class="status-tag">Available for Adoption</span>
+        </div>
+    </div>
 </section>
 
 <section>
     <h2>Care Schedule</h2>
-
-    <table border="1">
+    <table class="care-table">
         <tr>
             <th>Animal</th>
             <th>Day</th>
@@ -90,14 +73,9 @@
     </table>
 </section>
 
-<section>
-    <h2>Learn More</h2>
-    <a href="https://www.aspca.org" target="_blank">Visit ASPCA (external link)</a>
-</section>
-
 <footer>
-    <address>Animal Care Project</address>
-    <p>© 2026 Animal Care</p>
+    <address>Contact: info@animalcare.com</address>
+    <p class="footer-copy">© 2026 Animal Care Project</p>
 </footer>
 
 </body>
