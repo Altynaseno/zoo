@@ -1,0 +1,51 @@
+/* 1. Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Стандартный шрифт из 1-й практики */
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* 2. Header & Branding (Customization) */
+header {
+    background-color: #2c3e50 !important; /* Твой фирменный темно-синий цвет */
+}
+
+header h1 {
+    font-family: 'Georgia', serif; /* Элегантный шрифт для заголовка */
+}
+
+/* 3. Navigation Customization */
+.navbar {
+    border-bottom: 2px solid #f1c40f; /* Добавляем желтую полосу как в твоем старом Aside */
+}
+
+/* 4. Custom Card Styles (Requirement: Customization) */
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px); /* Карточка "подпрыгивает" при наведении */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Чтобы картинки разных пропорций не растягивались */
+}
+
+/* 5. Footer Style */
+footer {
+    font-family: 'Courier New', monospace; /* Моноширинный шрифт для футера */
+    background-color: #212529;
+}
+
+/* 6. Self-Study: Extra Responsive Utility */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem; /* Уменьшаем заголовок на мобилках для аккуратности */
+    }
+}

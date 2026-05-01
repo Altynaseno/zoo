@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Animal Care</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - jQuery & DOM Interaction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        #priority-demo { color: blue; }
+        #box { width: 60px; height: 60px; background-color: #0d6efd; position: relative; border-radius: 8px; }
+        .interactive-section { border: 1px solid #dee2e6; padding: 25px; border-radius: 12px; margin-bottom: 24px; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        #fade-img { width: 100%; max-width: 300px; border-radius: 10px; display: none; margin-top: 15px; }
+        .game-area { background-color: #f8f9fa; border-left: 5px solid #198754; }
     </style>
 </head>
-<body>
+<body class="bg-light">
 
-<header>
-    <h1 id="main-title">Animal Care and Pet Advice</h1>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="dogs.html">Dogs</a>
-    <a href="cats.html">Cats</a>
-    <a href="exotic.html">Exotic</a>
-    <a href="contact.html">Contact</a>
+<nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+        <span class="navbar-brand">Zoo Project | Assignment 5</span>
+    </div>
 </nav>
 
-<hr>
+<div class="container">
+    <div class="row">
+        <!-- Section 1: Effects & CSS -->
+        <div class="col-md-6">
+            <div class="interactive-section">
+                <h3>1. Selectors & Effects</h3>
+                <p id="text-target">This text will change its style or disappear!</p>
+                <div class="btn-group w-100 mb-3">
+                    <button id="btn-hide" class="btn btn-outline-danger">Hide</button>
+                    <button id="btn-show" class="btn btn-outline-success">Show</button>
+                    <button id="btn-toggle" class="btn btn-outline-primary">Toggle & Style</button>
+                </div>
+                <hr>
+                <button id="btn-fade" class="btn btn-warning w-100">Fade Toggle Image</button>
+                <div class="text-center">
+                    <img id="fade-img" src="https://picsum.photos/300/200" alt="Dynamic Content">
+                </div>
+            </div>
+        </div>
 
-<section id="priority-section">
-    <h2>Selector Priority Demo</h2>
-    <p id="priority-demo" class="priority-class" style="color: red;">
-        This text demonstrates CSS selector precedence.
-    </p>
-</section>
-
-<section id="about">
-    <h2>About Our Mission</h2>
-    <p class="highlight">This website helps you learn how to take care of pets properly.</p>
-    <p class="justify-text">
-        Proper animal care requires patience, knowledge, and dedication. Whether you own a dog, a cat, or a lizard, 
-        understanding their specific needs is crucial for a happy life. We provide the best guides for your furry friends.
-    </p>
-</section>
-
-<section id="profile-area">
-    <h2>Featured Pet</h2>
-    <div class="profile-card" id="featured-pet">
-        <img src="pet.jpg" alt="Buddy the Dog" class="profile-img">
-        <div class="profile-info">
-            <h3 class="pet-name">Buddy</h3>
-            <p class="pet-desc">A friendly Golden Retriever who loves playing catch and eating healthy treats.</p>
-            <span class="status-tag">Available for Adoption</span>
+        <!-- Section 2: DOM Manipulation -->
+        <div class="col-md-6">
+            <div class="interactive-section">
+                <h3>2. DOM Manipulation</h3>
+                <ul id="my-list" class="list-group mb-3">
+                    <li class="list-group-item">Initial List Item</li>
+                </ul>
+                <div class="d-flex gap-2 mb-3">
+                    <button id="btn-add" class="btn btn-primary flex-grow-1">Add Item</button>
+                    <button id="btn-remove" class="btn btn-danger flex-grow-1">Remove Last</button>
+                </div>
+                <hr>
+                <button id="btn-attr" class="btn btn-info w-100 text-white">Update Image & Link</button>
+                <a id="demo-link" href="https://google.com" target="_blank" class="d-block mt-3 text-center">Visit Google</a>
+            </div>
         </div>
     </div>
-</section>
 
-<section>
-    <h2>Care Schedule</h2>
-    <table class="care-table">
-        <tr>
-            <th>Animal</th>
-            <th>Day</th>
-            <th>Time</th>
-        </tr>
-        <tr>
-            <td>Dog</td>
-            <td>Monday</td>
-            <td>10:00</td>
-        </tr>
-        <tr>
-            <td>Cat</td>
-            <td>Tuesday</td>
-            <td>12:00</td>
-        </tr>
-    </table>
-</section>
+    <div class="row">
+        <!-- Section 3: Animations -->
+        <div class="col-md-6">
+            <div class="interactive-section">
+                <h3>3. Complex Animation</h3>
+                <p class="small text-muted">Step-by-step movement chain:</p>
+                <div id="box" class="mb-4"></div>
+                <button id="btn-animate" class="btn btn-dark w-100">Run Animation Loop</button>
+            </div>
+        </div>
 
-<footer>
-    <address>Contact: info@animalcare.com</address>
-    <p class="footer-copy">© 2026 Animal Care Project</p>
+        <!-- Section 4: Guessing Game (Main Task) -->
+        <div class="col-md-6">
+            <div class="interactive-section game-area">
+                <h3>4. Number Guessing Game</h3>
+                <p>I am thinking of a number between 1 and 100.</p>
+                <div class="input-group mb-3">
+                    <input type="number" id="guess-input" class="form-control" placeholder="Enter your guess...">
+                    <button id="btn-guess" class="btn btn-success">Check</button>
+                </div>
+                <div id="game-msg" class="alert d-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-1">Assignment 5: Interactive Web Application</p>
+        <p class="small text-secondary">Developed by: <strong>Altynay Nassenova & Bekzhigitova Tamiris</strong></p>
+    </div>
 </footer>
 
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
